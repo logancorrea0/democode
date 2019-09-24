@@ -6,6 +6,7 @@ public class Point
 //Create instance variables for x and y coordinates
 	private int x;
 	private int y;
+	public static int count = 0;
 	
 //24.
 //Create a static variable pcount to keep up with the number of created points
@@ -16,6 +17,7 @@ public class Point
 //Create a no argument constructor that will set all coordinates to 0
 	public Point ()
 	{
+		count++;
 		x=0;
 		y=0;
 	}
@@ -24,6 +26,7 @@ public class Point
 //Create a 2 argument constructor for accepting two ints
 	public Point(int x, int y)
 	{
+		count++;
 		this.x=x;
 		this.y=y;
 	}
@@ -55,14 +58,29 @@ public class Point
 	}
 //9. 
 //Create a function that will test a point against a "this" point
-	public boolean eq(Point p1)
+	public boolean eq(Point p)
 	{
-		if((x == p1.getX()) && (y == p1.getY()))
+		if((x == p.getX()) && (y == p.getY()))
 			return true;
 		else
 			return false;
 	}
 	
+	public static boolean sEq(Point p1, Point p2)
+	{
+		if((p1.getX() == p2.getX()) && (p1.getY() == p2.getY()))
+			return true;
+		else
+			return false;
+	}
+	
+	/*public boolean woop(Point p1, Point p2)
+	{
+		if((p1.getX() == p2.getX()) && (p1.getY() == p2.getY()))
+			return true;
+		else
+			return false;
+	}*/
 //Return to driver file and test
 
 

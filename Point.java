@@ -15,33 +15,52 @@ public class Point
 //2. 
 //Create a no argument constructor that will set all coordinates to 0
 	public Point ()
-	{}
+	{
+		x=0;
+		y=0;
+	}
 	
 //3. 
 //Create a 2 argument constructor for accepting two ints
-	//public Point(int x, int y)
-	{}
+	public Point(int x, int y)
+	{
+		this.x=x;
+		this.y=y;
+	}
 
 //4. 
 //Create a manual setter
-	public void setPoint()
-	{}
+//Point p = new Point(); p.setPoint(4,5);
+	public void setPoint(int x, int y)
+	{
+		this.x=x;
+		this.y=y;
+	}
 
 //5. 
 //Create an x getter
 	public int getX()
-	{}
+	{return x;}
 	
 //6. 
 //Create a y getter test from your driver
 	public int getY()
-	{}
+	{return y;}
 
+
+	public void printPoint()
+	{
+		System.out.println("x = " +x);
+		System.out.println("y = " +y);
+	}
 //9. 
 //Create a function that will test a point against a "this" point
 	public boolean eq(Point p1)
 	{
-	return true;
+		if((x == p1.getX()) && (y == p1.getY()))
+			return true;
+		else
+			return false;
 	}
 	
 //Return to driver file and test

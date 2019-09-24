@@ -7,10 +7,15 @@ public class Demo8
 	
 //7. 
 //Create 4 points with two of them equal
-	/*Point p1 = new Point(1,2);
+	Point p1 = new Point(1,2);
 	Point p2 = new Point(2,3);
 	Point p3 = new Point(1,2);
-	Point p4 = new Point(4,5);*/
+	Point p4 = new Point(4,5);
+	
+	//p1.printPoint();
+	//p2.printPoint();
+	
+	System.out.println(p1.eq(p4));
 	
 //8. 
 //test a getter and then create a is equal method in the point file
